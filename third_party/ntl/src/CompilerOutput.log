@@ -1,0 +1,7 @@
+*** CompilerOutput.log ***
+*** building GenConfigInfo
+/usr/bin/clang++ -I../include -I.  -O2 -arch arm64   -o  GenConfigInfo GenConfigInfo.cpp -lm
+*** checking -pthread flag
+/usr/bin/clang++ -I../include -I.  -O2 -arch arm64 -pthread  -o  CheckCompile CheckCompile.cpp -lm
+/usr/bin/clang++ -I../include -I.  -O2 -arch arm64 -pthread   -o  CheckContract CheckContract.cpp CheckContractAux.cpp -lm
+/usr/bin/clang++ -I../include -I.  -O2 -arch arm64 -pthread  -o  CheckThreads CheckThreads.cpp -lm

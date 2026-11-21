@@ -1,0 +1,313 @@
+fac_utils.c:2:1: error: unknown type name 'fac_cint'
+    2 | fac_cint **c_factor(const cint *N, fac_params *config) {
+      | ^~~~~~~~
+fac_utils.c:2:27: error: unknown type name 'cint'
+    2 | fac_cint **c_factor(const cint *N, fac_params *config) {
+      |                           ^~~~
+fac_utils.c:2:36: error: unknown type name 'fac_params'
+    2 | fac_cint **c_factor(const cint *N, fac_params *config) {
+      |                                    ^~~~~~~~~~
+fac_utils.c:77:23: error: unknown type name 'fac_caller'
+   77 | int fac_special_cases(fac_caller *m) {
+      |                       ^~~~~~~~~~
+fac_utils.c:86:24: error: unknown type name 'fac_caller'
+   86 | int fac_trial_division(fac_caller *m, const int level) {
+      |                        ^~~~~~~~~~
+fac_utils.c:119:24: error: unknown type name 'fac_caller'
+  119 | int fac_any_root_check(fac_caller * m, const cint *N, cint *ROOT, cint *REM){
+      |                        ^~~~~~~~~~
+fac_utils.c:119:46: error: unknown type name 'cint'
+  119 | int fac_any_root_check(fac_caller * m, const cint *N, cint *ROOT, cint *REM){
+      |                                              ^~~~
+fac_utils.c:119:55: error: unknown type name 'cint'; did you mean 'int'?
+  119 | int fac_any_root_check(fac_caller * m, const cint *N, cint *ROOT, cint *REM){
+      |                                                       ^~~~
+      |                                                       int
+fac_utils.c:119:67: error: unknown type name 'cint'; did you mean 'int'?
+  119 | int fac_any_root_check(fac_caller * m, const cint *N, cint *ROOT, cint *REM){
+      |                                                                   ^~~~
+      |                                                                   int
+fac_utils.c:137:25: error: unknown type name 'fac_caller'
+  137 | int fac_perfect_checker(fac_caller *m) {
+      |                         ^~~~~~~~~~
+fac_utils.c:146:27: error: unknown type name 'fac_caller'
+  146 | int fac_primality_checker(fac_caller *m) {
+      |                           ^~~~~~~~~~
+fac_utils.c:153:29: error: unknown type name 'fac_caller'
+  153 | int fac_pollard_rho_63_bits(fac_caller *m) {
+      |                             ^~~~~~~~~~
+fac_utils.c:182:15: error: unknown type name 'fac_caller'
+  182 | void fac_push(fac_caller *m, const cint * num, const int prime, const int power, const int forward) {
+      |               ^~~~~~~~~~
+fac_utils.c:182:36: error: unknown type name 'cint'
+  182 | void fac_push(fac_caller *m, const cint * num, const int prime, const int power, const int forward) {
+      |                                    ^~~~
+fac_utils.c:202:28: error: unknown type name 'qs_sm'
+  202 | int is_prime_4669921(const qs_sm n) {
+      |                            ^~~~~
+fac_utils.c:222:1: error: unknown type name 'qs_sm'
+  222 | qs_sm multiplication_modulo(qs_md a, qs_md b, const qs_sm mod) {
+      | ^~~~~
+fac_utils.c:222:29: error: unknown type name 'qs_md'
+  222 | qs_sm multiplication_modulo(qs_md a, qs_md b, const qs_sm mod) {
+      |                             ^~~~~
+fac_utils.c:222:38: error: unknown type name 'qs_md'
+  222 | qs_sm multiplication_modulo(qs_md a, qs_md b, const qs_sm mod) {
+      |                                      ^~~~~
+fac_utils.c:222:53: error: unknown type name 'qs_sm'
+  222 | qs_sm multiplication_modulo(qs_md a, qs_md b, const qs_sm mod) {
+      |                                                     ^~~~~
+fac_utils.c:233:1: error: unknown type name 'qs_sm'
+  233 | qs_sm power_modulo(qs_md n, qs_md exp, const qs_sm mod) {
+      | ^~~~~
+fac_utils.c:233:20: error: unknown type name 'qs_md'
+  233 | qs_sm power_modulo(qs_md n, qs_md exp, const qs_sm mod) {
+      |                    ^~~~~
+fac_utils.c:233:29: error: unknown type name 'qs_md'
+  233 | qs_sm power_modulo(qs_md n, qs_md exp, const qs_sm mod) {
+      |                             ^~~~~
+fac_utils.c:233:46: error: unknown type name 'qs_sm'
+  233 | qs_sm power_modulo(qs_md n, qs_md exp, const qs_sm mod) {
+      |                                              ^~~~~
+fac_utils.c:240:22: error: unknown type name 'qs_sm'
+  240 | int kronecker_symbol(qs_sm a, qs_sm b) {
+      |                      ^~~~~
+fac_utils.c:240:31: error: unknown type name 'qs_sm'
+  240 | int kronecker_symbol(qs_sm a, qs_sm b) {
+      |                               ^~~~~
+fac_utils.c:257:1: error: unknown type name 'qs_sm'
+  257 | qs_sm tonelli_shanks(const qs_sm n, const qs_sm mod) {
+      | ^~~~~
+fac_utils.c:257:28: error: unknown type name 'qs_sm'
+  257 | qs_sm tonelli_shanks(const qs_sm n, const qs_sm mod) {
+      |                            ^~~~~
+fac_utils.c:257:43: error: unknown type name 'qs_sm'
+  257 | qs_sm tonelli_shanks(const qs_sm n, const qs_sm mod) {
+      |                                           ^~~~~
+fac_utils.c: In function 'tonelli_shanks':
+fac_utils.c:261:15: error: unknown type name 'qs_sm'
+  261 |         const qs_sm a = (qs_sm) (n % mod);
+      |               ^~~~~
+fac_utils.c:261:26: error: 'qs_sm' undeclared (first use in this function)
+  261 |         const qs_sm a = (qs_sm) (n % mod);
+      |                          ^~~~~
+fac_utils.c:261:26: note: each undeclared identifier is reported only once for each function it appears in
+fac_utils.c:262:14: error: expected ';' before 'res'
+  262 |         qs_sm res = kronecker_symbol(a, mod) == 1, b, c, d, e, f, g, h;
+      |              ^~~~
+      |              ;
+fac_utils.c:263:13: error: 'res' undeclared (first use in this function)
+  263 |         if (res)
+      |             ^~~
+fac_utils.c:266:39: warning: implicit declaration of function 'power_modulo' [-Wimplicit-function-declaration]
+  266 |                                 res = power_modulo(a, (mod + 1) >> 2, mod);
+      |                                       ^~~~~~~~~~~~
+fac_utils.c:270:37: warning: implicit declaration of function 'multiplication_modulo' [-Wimplicit-function-declaration]
+  270 |                                 if (multiplication_modulo(res, res, mod) != a) {
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+fac_utils.c:271:41: error: 'b' undeclared (first use in this function)
+  271 |                                         b = power_modulo(2, (mod - 1) >> 2, mod);
+      |                                         ^
+fac_utils.c:279:46: error: 'c' undeclared (first use in this function)
+  279 |                                         for (c = mod - 1, d = 2; d < mod && power_modulo(d, c >> 1, mod) != c; ++d);
+      |                                              ^
+fac_utils.c:279:59: error: 'd' undeclared (first use in this function)
+  279 |                                         for (c = mod - 1, d = 2; d < mod && power_modulo(d, c >> 1, mod) != c; ++d);
+      |                                                           ^
+fac_utils.c:280:46: error: 'e' undeclared (first use in this function)
+  280 |                                         for (e = 0; !(c & 1); ++e, c >>= 1);
+      |                                              ^
+fac_utils.c:281:41: error: 'f' undeclared (first use in this function)
+  281 |                                         f = power_modulo(a, c, mod);
+      |                                         ^
+fac_utils.c:283:46: error: 'h' undeclared (first use in this function)
+  283 |                                         for (h = 0, g = 0; h < e; h++) {
+      |                                              ^
+fac_utils.c:283:53: error: 'g' undeclared (first use in this function)
+  283 |                                         for (h = 0, g = 0; h < e; h++) {
+      |                                                     ^
+fac_utils.c: At top level:
+fac_utils.c:298:1: error: unknown type name 'qs_sm'
+  298 | qs_sm modular_inverse(qs_sm ra, qs_sm rb) {
+      | ^~~~~
+fac_utils.c:298:23: error: unknown type name 'qs_sm'
+  298 | qs_sm modular_inverse(qs_sm ra, qs_sm rb) {
+      |                       ^~~~~
+fac_utils.c:298:33: error: unknown type name 'qs_sm'
+  298 | qs_sm modular_inverse(qs_sm ra, qs_sm rb) {
+      |                                 ^~~~~
+fac_utils.c:315:1: error: unknown type name 'qs_md'
+  315 | qs_md rand_64() {
+      | ^~~~~
+fac_utils.c: In function 'rand_64':
+fac_utils.c:317:9: error: unknown type name 'qs_md'
+  317 |         qs_md res = 0;
+      |         ^~~~~
+fac_utils.c:318:14: error: unknown type name 'qs_sm'
+  318 |         for (qs_sm i = 65; --i; res <<= 1, res |= rand() & 1);
+      |              ^~~~~
+fac_utils.c:318:51: warning: implicit declaration of function 'rand'; did you mean 'rand_64'? [-Wimplicit-function-declaration]
+  318 |         for (qs_sm i = 65; --i; res <<= 1, res |= rand() & 1);
+      |                                                   ^~~~
+      |                                                   rand_64
+fac_utils.c: At top level:
+fac_utils.c:322:1: error: unknown type name 'qs_md'
+  322 | qs_md rand_upto(const qs_md limit) {
+      | ^~~~~
+fac_utils.c:322:23: error: unknown type name 'qs_md'
+  322 | qs_md rand_upto(const qs_md limit) {
+      |                       ^~~~~
+fac_utils.c: In function 'add_rand_seed':
+fac_utils.c:331:58: error: 'uintptr_t' undeclared (first use in this function)
+  331 |                 seed ^= *(unsigned *) addr + (unsigned) (uintptr_t) &errno;
+      |                                                          ^~~~~~~~~
+fac_utils.c:1:1: note: 'uintptr_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | // Front-End Factor manager
+fac_utils.c:331:70: error: 'errno' undeclared (first use in this function)
+  331 |                 seed ^= *(unsigned *) addr + (unsigned) (uintptr_t) &errno;
+      |                                                                      ^~~~~
+fac_utils.c:1:1: note: 'errno' is defined in header '<errno.h>'; did you forget to '#include <errno.h>'?
+  +++ |+#include <errno.h>
+    1 | // Front-End Factor manager
+fac_utils.c:333:17: warning: implicit declaration of function 'srand' [-Wimplicit-function-declaration]
+  333 |                 srand(seed);
+      |                 ^~~~~
+fac_utils.c: At top level:
+fac_utils.c:339:25: error: unknown type name 'cint'; did you mean 'int'?
+  339 | void simple_inline_cint(cint *N, const size_t size, void **mem) {
+      |                         ^~~~
+      |                         int
+fac_utils.c:339:40: error: unknown type name 'size_t'
+  339 | void simple_inline_cint(cint *N, const size_t size, void **mem) {
+      |                                        ^~~~~~
+fac_utils.c:345:22: error: unknown type name 'cint'; did you mean 'int'?
+  345 | void simple_dup_cint(cint *A, const cint *B, void **mem) {
+      |                      ^~~~
+      |                      int
+fac_utils.c:345:37: error: unknown type name 'cint'
+  345 | void simple_dup_cint(cint *A, const cint *B, void **mem) {
+      |                                     ^~~~
+fac_utils.c:354:25: error: unknown type name 'cint'; did you mean 'int'?
+  354 | void simple_int_to_cint(cint *num, qs_md value) {
+      |                         ^~~~
+      |                         int
+fac_utils.c:354:36: error: unknown type name 'qs_md'
+  354 | void simple_int_to_cint(cint *num, qs_md value) {
+      |                                    ^~~~~
+fac_utils.c:359:1: error: unknown type name 'qs_md'
+  359 | qs_md simple_cint_to_int(const cint *num) {
+      | ^~~~~
+fac_utils.c:359:32: error: unknown type name 'cint'
+  359 | qs_md simple_cint_to_int(const cint *num) {
+      |                                ^~~~
+fac_utils.c: In function 'simple_cint_to_int':
+fac_utils.c:361:9: error: unknown type name 'qs_md'
+  361 |         qs_md res = 0;
+      |         ^~~~~
+fac_utils.c:362:14: error: unknown type name 'h_cint_t'
+  362 |         for (h_cint_t *ptr = num->end; ptr > num->mem; res = (qs_md) (res * cint_base + *--ptr));
+      |              ^~~~~~~~
+fac_utils.c:362:33: error: request for member 'end' in something not a structure or union
+  362 |         for (h_cint_t *ptr = num->end; ptr > num->mem; res = (qs_md) (res * cint_base + *--ptr));
+      |                                 ^~
+fac_utils.c:362:49: error: request for member 'mem' in something not a structure or union
+  362 |         for (h_cint_t *ptr = num->end; ptr > num->mem; res = (qs_md) (res * cint_base + *--ptr));
+      |                                                 ^~
+fac_utils.c:362:63: error: 'qs_md' undeclared (first use in this function)
+  362 |         for (h_cint_t *ptr = num->end; ptr > num->mem; res = (qs_md) (res * cint_base + *--ptr));
+      |                                                               ^~~~~
+fac_utils.c:362:77: error: 'cint_base' undeclared (first use in this function)
+  362 |         for (h_cint_t *ptr = num->end; ptr > num->mem; res = (qs_md) (res * cint_base + *--ptr));
+      |                                                                             ^~~~~~~~~
+fac_utils.c: In function 'avl_cint_inserter':
+fac_utils.c:371:12: error: invalid use of undefined type 'struct avl_node'
+  371 |         res->key = (cint *) (res + 1);
+      |            ^~
+fac_utils.c:371:21: error: 'cint' undeclared (first use in this function); did you mean 'int'?
+  371 |         res->key = (cint *) (res + 1);
+      |                     ^~~~
+      |                     int
+fac_utils.c:371:27: error: expected expression before ')' token
+  371 |         res->key = (cint *) (res + 1);
+      |                           ^
+fac_utils.c:372:22: error: expected expression before ')' token
+  372 |         mem = (cint *) res->key + 1;
+      |                      ^
+fac_utils.c:373:9: warning: implicit declaration of function 'simple_dup_cint' [-Wimplicit-function-declaration]
+  373 |         simple_dup_cint(res->key, key_to_save, &mem);
+      |         ^~~~~~~~~~~~~~~
+fac_utils.c:373:28: error: invalid use of undefined type 'struct avl_node'
+  373 |         simple_dup_cint(res->key, key_to_save, &mem);
+      |                            ^~
+fac_utils.c:374:9: warning: implicit declaration of function 'assert' [-Wimplicit-function-declaration]
+  374 |         assert(res->value == 0);
+      |         ^~~~~~
+fac_utils.c:1:1: note: 'assert' is defined in header '<assert.h>'; did you forget to '#include <assert.h>'?
+  +++ |+#include <assert.h>
+    1 | // Front-End Factor manager
+fac_utils.c:374:19: error: invalid use of undefined type 'struct avl_node'
+  374 |         assert(res->value == 0);
+      |                   ^~
+fac_utils.c: In function 'mem_aligned':
+fac_utils.c:383:37: error: 'uintptr_t' undeclared (first use in this function)
+  383 |         res = (char *) ptr + (64 - (uintptr_t) ptr) % 64;
+      |                                     ^~~~~~~~~
+fac_utils.c:383:37: note: 'uintptr_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_utils.c:383:47: error: expected ')' before 'ptr'
+  383 |         res = (char *) ptr + (64 - (uintptr_t) ptr) % 64;
+      |                              ~                ^~~~
+      |                                               )
+fac_utils.c: In function 'fac_apply_custom_param':
+fac_utils.c:389:19: warning: implicit declaration of function 'memcmp' [-Wimplicit-function-declaration]
+  389 |         int res = memcmp(a, b, length) == 0;
+      |                   ^~~~~~
+fac_utils.c:1:1: note: include '<string.h>' or provide a declaration of 'memcmp'
+  +++ |+#include <string.h>
+    1 | // Front-End Factor manager
+fac_utils.c:389:32: warning: 'memcmp' argument 3 type is 'int' where 'long long unsigned int' is expected in a call to built-in function declared without prototype [-Wbuiltin-declaration-mismatch]
+  389 |         int res = memcmp(a, b, length) == 0;
+      |                                ^~~~~~
+<built-in>: note: built-in 'memcmp' declared here
+fac_utils.c: At top level:
+fac_utils.c:399:23: error: unknown type name 'fac_params'
+  399 | char *fac_fill_params(fac_params *params, int argc, char **args) {
+      |                       ^~~~~~~~~~
+fac_utils.c:421:28: error: unknown type name 'fac_cint'
+  421 | char *fac_answer_to_string(fac_cint **ans) {
+      |                            ^~~~~~~~
+fac_utils.c: In function 'fac_display_progress':
+fac_utils.c:454:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  454 |         printf("%s at %.02f %%...", name, percentage);
+      |         ^~~~~~
+fac_utils.c:1:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+  +++ |+#include <stdio.h>
+    1 | // Front-End Factor manager
+fac_utils.c:454:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  454 |         printf("%s at %.02f %%...", name, percentage);
+      |         ^~~~~~
+fac_utils.c:454:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+fac_utils.c:455:9: warning: implicit declaration of function 'putchar' [-Wimplicit-function-declaration]
+  455 |         putchar('\r');
+      |         ^~~~~~~
+fac_utils.c:455:9: note: include '<stdio.h>' or provide a declaration of 'putchar'
+fac_utils.c:456:9: warning: implicit declaration of function 'fflush' [-Wimplicit-function-declaration]
+  456 |         fflush(stdout);
+      |         ^~~~~~
+fac_utils.c:456:16: error: 'stdout' undeclared (first use in this function)
+  456 |         fflush(stdout);
+      |                ^~~~~~
+fac_utils.c:456:16: note: 'stdout' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+fac_utils.c: In function 'fac_sort_result':
+fac_utils.c:460:15: error: unknown type name 'fac_cint'
+  460 |         const fac_cint * L = lhs, *R = rhs;
+      |               ^~~~~~~~
+fac_utils.c:461:16: warning: implicit declaration of function 'h_cint_compare' [-Wimplicit-function-declaration]
+  461 |         return h_cint_compare(&L->cint, &R->cint);
+      |                ^~~~~~~~~~~~~~
+fac_utils.c:461:33: error: request for member 'cint' in something not a structure or union
+  461 |         return h_cint_compare(&L->cint, &R->cint);
+      |                                 ^~
+fac_utils.c:461:43: error: request for member 'cint' in something not a structure or union
+  461 |         return h_cint_compare(&L->cint, &R->cint);
+      |                                           ^~

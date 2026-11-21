@@ -1,0 +1,10 @@
+Name: DiscreteMathCalculator
+Version 3.0
+Author: William Ford
+
+Professor Emeritus, Department of Computer Science,
+School of Engineering and Computer Science,
+University of the Pacific,
+Stockton, California 95211
+
+E-mail: wford333@gmail.com

@@ -1,0 +1,6 @@
+Do the following
+   rm -r CMakeCache.txt CMakeFiles
+   cmake .
+   make
+   ./install.sh
+

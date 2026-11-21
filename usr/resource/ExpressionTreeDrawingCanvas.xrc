@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc">
+	<object class="wxFrame" name="ExpressionTreeDrawingCanvas">
+		<title>Expression Tree</title>
+		<size>1000,708</size>
+		<style>wxDEFAULT_FRAME_STYLE|wxSYSTEM_MENU|wxRESIZE_BORDER|wxCLOSE_BOX|wxMAXIMIZE_BOX|wxMINIMIZE_BOX</style>
+		<object class="wxPanel" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_PANEL">
+			<pos>312,216</pos>
+			<object class="wxFlexGridSizer">
+				<cols>1</cols>
+				<rows>3</rows>
+				<growablecols>0</growablecols>
+				<growablerows>0</growablerows>
+				<object class="sizeritem">
+					<object class="wxScrolledWindow" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_SCROLLEDWINDOW">
+						<bg>wxSYS_COLOUR_WINDOW</bg>
+						<style>wxHSCROLL|wxVSCROLL|wxSIMPLE_BORDER</style>
+					</object>
+					<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+					<border>5</border>
+					<option>1</option>
+				</object>
+				<object class="sizeritem">
+					<object class="wxStaticText" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_POSTFIX_VALUE_OUTPUT_STATICTEXT">
+						<label>Postfix Expression and the Expression Value</label>
+					</object>
+					<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+					<border>5</border>
+					<option>1</option>
+				</object>
+				<object class="sizeritem">
+					<object class="wxTextCtrl" name="ID_EXPRESSION_TREE_POSTFIX_VALUE_OUTPUT_TEXTCTRL">
+						<size>1000,150</size>
+						<style>wxTE_MULTILINE|wxSIMPLE_BORDER</style>
+					</object>
+					<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+					<border>2</border>
+					<option>1</option>
+				</object>
+			</object>
+		</object>
+		<object class="wxMenuBar">
+			<object class="wxMenu">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_PRINT_MENUITEM">
+					<label>Print...</label>
+					<accel>CTRL-P</accel>
+				</object>
+				<object class="wxMenuItem" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_SAVE_AS_GRAPHML_MENUITEM">
+					<label>Save as GraphML...</label>
+				</object>
+				<object class="wxMenuItem" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_SAVE_AS_JPG_MENUITEM">
+					<label>Save as JPG</label>
+				</object>
+				<object class="wxMenuItem" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_SAVE_AS_GIF_MENUITEM">
+					<label>Save as GIF</label>
+				</object>
+				<object class="wxMenuItem" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_EXIT_MENUITEM">
+					<label>Exit</label>
+					<accel>ALT-F4</accel>
+				</object>
+			</object>
+			<object class="wxMenu">
+				<label>&amp;Edit</label>
+				<object class="wxMenuItem" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_COPY_IMAGE_MENUITEM">
+					<label>Copy Image</label>
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_EXPRESSION_TREE_DRAWING_CANVAS_STATUSBAR">
+			<fields>1</fields>
+			<widths>-10</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</resource>

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RSA Encryption</title>
+<style type="text/css">
+.style8 {
+	text-align: left;
+}
+  .style7 {
+	margin-left: 40px;
+}
+.style1 {
+	vertical-align: middle;
+}
+.style2 {
+	border-width: 1px;
+}
+.style9 {
+	font-family: Symbol;
+}
+</style>
+</head>
+
+<body>
+<p>If you work through the following steps, note that the integers displayed will differ from those in this tutorial since some computations involve random numbers. The decrypted result will remain&nbsp;1862474446406222365543.</p>
+<table style="TEXT-ALIGN: left; WIDTH: 100%" cellSpacing="2" cellPadding="2">
+	<tr>
+		<td style="VERTICAL-ALIGN: middle" class="style8">1.</td>
+		<td style="WIDTH: 98%">To encrypt a message, the<span> message must be
+		converted into an integer. We will use the following encoding:<br />
+		<div style="MARGIN-LEFT: 40px">&#39;0&#39; ⇔ 00, &#39;1&#39;⇔<span class="style9">&nbsp;</span>01, ..., &#39;9&#39;⇔<span class="style9">&nbsp;</span>09, &#39;A&#39;⇔<span class="style9">&nbsp;</span>10, &#39;B&#39;⇔<span class="style9">&nbsp;</span>11, ..., &#39;Z&#39;⇔<span class="style9">&nbsp;</span>35,
+		&#39;a&#39;⇔<span class="style9">&nbsp;</span>36, &#39;b&#39;⇔<span class="style9">&nbsp;</span>37, ..., &#39;z&#39;⇔<span class="style9">&nbsp;</span>61, &#39; &#39;(blank)⇔<span class="style9">&nbsp;</span>62 </div>
+		Using this encoding, the message &quot;I like Math&quot; is represented by the
+		integer 1862474446406222365543.<br />
+		</span></td>
+	</tr>
+</table>
+
+<table style="TEXT-ALIGN: left; WIDTH: 100%" cellSpacing="2" cellPadding="2">
+	<tr>
+		<td style="VERTICAL-ALIGN: middle" class="style8">2.</td>
+		<td style="WIDTH: 98%">Generate two 64-bit random prime numbers p
+		and q. Then form the product n = pq. Do this by generating one random
+		64-bit integer, executing →a, generating a second random 64-bit
+		integer, executing →b and then executing *. Here we got
+		  <div style="MARGIN-LEFT: 40px">p = 10498885118990589977, q = 14473981811441518427, and n = 151960672252683821250247341461447006179<br />
+		  </div>
+		<span>Save n in memory register 1 by pressing MS1.<br />
+		</span></td>
+	</tr>
+</table>
+<br />
+<div style="MARGIN-LEFT: 80px">
+	<p class="style7"><span>
+	<img alt="" src="../images/RSA1.png" v:shapes="Picture_x0020_4" /></span><br />
+	</p>
+</div>
+<br />
+<table style="TEXT-ALIGN: left; WIDTH: 100%" cellSpacing="2" cellPadding="2">
+	<tr>
+		<td class="style8">3.</td>
+		<td style="WIDTH: 98%">Use the <strong>phi(a*b)</strong> button to compute
+		the value of the totient function t = &#966;(n) = (p-1)*(q-1) = 151960672252683821225274474531014897776. Copy t to both
+		n and a using →<strong>n</strong> and →<strong>a</strong>.</td>
+	</tr>
+	<tr>
+		<td style="TEXT-ALIGN: center">&nbsp;</td>
+		<td style="WIDTH: 95%">&nbsp;</td>
+	</tr>
+</table>
+<br />
+<div style="MARGIN-LEFT: 80px">
+	<p class="style7"><span>
+	<img alt="" src="../images/RSA2.png" v:shapes="Picture_x0020_6" /></span></p>
+</div>
+<br />
+<table style="TEXT-ALIGN: left; WIDTH: 100%" cellSpacing="2" cellPadding="2">
+	<tr>
+		<td class="style8">4.</td>
+		<td style="WIDTH: 98%">Execute <strong>coprime(a)</strong>. This computes e, an
+		integer in Z<sub>n</sub> that is relatively prime to
+		t = &#966;(n). Copy e to both a and b using <strong>-&gt;a</strong> and <strong>-&gt;b</strong>. We have now
+		computed the <em>public key</em> (e,n).</span></td>
+	</tr>
+	<tr>
+		<td style="TEXT-ALIGN: center">&nbsp;</td>
+		<td style="WIDTH: 95%">&nbsp;</td>
+	</tr>
+</table>
+<br />
+<div style="MARGIN-LEFT: 80px">
+	<p class="style7"><span>
+	<img alt="" src="../images/RSA3.png" v:shapes="Picture_x0020_7" /></span><br />
+	</p>
+</div>
+<br />
+<table style="TEXT-ALIGN: left; WIDTH: 100%" cellSpacing="2" cellPadding="2">
+	<tr>
+		<td class="style8">5.</td>
+		<td style="WIDTH: 98%">We can now compute d such that ed &nbsp &#8801; 1 (mod &#966;(n)) by
+		pressing <strong>inv(a) mod(n)</strong>. Copy d to memory register 2 by pressing <strong>MS2</strong>. We now have the <em>private key</em> (d, n).</span></td>
+	</tr>
+	<tr>
+		<td style="TEXT-ALIGN: center">&nbsp;</td>
+		<td style="WIDTH: 95%">&nbsp;</td>
+	</tr>
+</table>
+<br />
+<div style="MARGIN-LEFT: 80px">
+	<p class="style7"><span>
+	<img alt="" src="../images/RSA4.png" v:shapes="Picture_x0020_11" /></span><br />
+	</p>
+</div>
+<br />
+<table style="TEXT-ALIGN: left; WIDTH: 100%" cellSpacing="2" cellPadding="2">
+	<tr>
+		<td class="style8">6.</td>
+		<td style="WIDTH: 98%"><span>We are now ready to encrypt the message M =
+		1862474446406222365543. Enter M into a, execute <strong>MR1</strong> and copy the
+		n to text field n using <strong>-&gt;n</strong>. Encrypt M by computing</span>
+		  <div style="MARGIN-LEFT: 40px">
+			C = M<span><sup>e</sup> (mod n)</span><br />
+		</div>
+Since M is in a, e is in b, and n is loaded, execute <strong>^ (mod n)</strong> to get the encrypted message C =&nbsp;105010901795307998633963878015458608293.</td>
+	</tr>
+	<tr>
+		<td style="TEXT-ALIGN: center">&nbsp;</td>
+		<td style="WIDTH: 95%; HEIGHT: 50px">&nbsp;</td>
+	</tr>
+</table>
+<br />
+<div style="MARGIN-LEFT: 80px">
+	<p class="style7"><span>
+	<img alt="" src="../images/RSA5.png" v:shapes="Picture_x0020_16" /></span><br />
+	</p>
+</div>
+<br />
+<table style="TEXT-ALIGN: left; WIDTH: 100%" cellSpacing="2" cellPadding="2">
+	<tr>
+		<td class="style8">7.</td>
+		<td style="WIDTH: 98%" class="style2" vAlign="top">To decrypt the
+		message, we must compute<br />
+		<div style="MARGIN-LEFT: 40px">
+			C<sup>d</sup><span> (mod n)</span></div>
+where (d, n) is the private key. Copy C to a by executing <strong>-&gt;a</strong>,
+		followed by <strong>MR2</strong> and <strong>-&gt;b</strong> and execute ^(mod n)<strong>.</strong></td>
+	</tr>
+	<tr>
+		<td style="TEXT-ALIGN: center">&nbsp;</td>
+		<td style="WIDTH: 95%; HEIGHT: 50px" class="style2" vAlign="top">&nbsp;</td>
+	</tr>
+</table>
+<br />
+<div style="MARGIN-LEFT: 80px">
+	<p class="style7"><span>
+	<img alt="" src="../images/RSA6.png" v:shapes="Picture_x0020_17" /></span></p>
+</div>
+<br />
+<table style="TEXT-ALIGN: left; WIDTH: 100%" cellSpacing="2" cellPadding="2">
+	<tr>
+		<td>&nbsp;</td>
+		<td style="WIDTH: 95%">&nbsp;</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td style="WIDTH: 98%">
+		<p style="MARGIN-LEFT: 0.086in" class="MsoNormal">The result is the
+		original message M = <span>1862474446406222365543. By inverting our
+		string -&gt; integer encoding, we get the original message<o:p></o:p></span></p>
+		<p style="MARGIN-LEFT: 0.173in" class="MsoNormal"><span><strong>&nbsp;I like
+		Math</strong></span></p>
+		</td>
+	</tr>
+</table>
+<br />
+
+</body>
+
+</html>

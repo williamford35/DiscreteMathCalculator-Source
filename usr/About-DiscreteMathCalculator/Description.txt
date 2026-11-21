@@ -1,0 +1,31 @@
+Welcome to Discrete Mathematics Calculator!
+
+Discrete Mathematics Calculator is intended for use in discrete mathematics, data structures,and algorithms.
+
+It implements number theoretic calculations such as modular arithmetic and many counting functions such as
+permutations, combinations, the Catalan numbers, and the Bell numbers. It also generates important
+and interesting triangles, such as Pascal's triangle, and the Bell triangle. The calculator also computes and enumerates
+subsets and set partitions. As an additional feature, the calculator factors large integers, demonstrates RSA encryption,
+Diffie-Hellman key exchange, digital signatures, and the discrete logarithm problem.
+
+It draws and performs operations for a number of binary trees, including balanced trees, Huffman trees,
+and expression trees and implements scans such as level order, inorder, and postorder. General trees can be drawn
+and traversed, and the equivalent binary tree drawn.
+
+Editable graphs, both undirected and directed, with or without parallel edges can be drawn with optional
+weighted edges. Once a graph is in its final state, a number of graph algorithms are available, including DFS/BFS,
+topological sort, the computation of strong components, determination of minimal paths, finding maximum flow in a network,
+locating a maximal independent edge set, and searching for Euler cycles and paths. For small graphs, NP complete problems
+such as TSP, finding a clique, locating Hamiltonian cycles and paths, and determining a vertex cover
+and independent set are also implemented.
+
+The software can define and graph relations and also draw the transitive, symmetric, and reflexive closure of a relation.
+The user can graph the Hasse diagram for the powerset of a set of up to size six and the Hasse diagram
+of the divisibility relation. As an example of a total order permutations can be listed in lexicographic order.
+
+Elliptic curves have applications in encryption and are commonly used for key exchange and digital signatures.
+The software executes numerous operations on elliptic curves in the field GF(p), p a prime,
+including curve plotting for small p that includes a point plot of the integer values in GF(p).
+A curve with p <= 47 can be created and used to demonstrate the problem of solving the discrete logarithm problem
+for elliptic curves. A demonstration of the Diffie-Hellman secure message passing algorithm using elliptic curves (ECDH)
+is available, along with the elliptic curve message passing algorithm (ECDSA).

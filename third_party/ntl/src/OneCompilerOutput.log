@@ -1,0 +1,1 @@
+/usr/bin/clang++ -I../include -I.  -O2 -arch arm64 -pthread  -o  CheckThreads CheckThreads.cpp -lm

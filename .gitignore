@@ -1,0 +1,111 @@
+# Git and build output
+XcodeBuild/
+XcodeBuild.saved/
+build-Release/
+build-Debug/
+bin/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Disk images and archives
+*.dmg
+*.dmg.sha256
+*.zip
+*.tar.gz
+
+# Backups
+*.backup
+*.bak
+*.old
+*.before-*
+*.failed-*
+*~
+Save/
+source-backups/
+source-backup-archive/
+resource-backups/
+HamiltonianPathBackups/
+old-examples-source/
+
+# macOS
+.DS_Store
+._*
+
+# Local development files
+.codelite/
+fix_*.py
+install_*.py
+add_hamiltonian_path.py
+make_hamiltonian_path_interactive.py
+backup-working-version.sh
+full-backup.sh
+cpp-difference.txt
+header-difference.txt
+line-count/
+lemon-source/
+
+# Source-distribution test builds
+XcodeBuild-WxTest/
+wxWidgets-TestBuild/
+wxWidgets-CleanTest/
+OGDF-TestBuild/
+OGDF-TestBuild2/
+OGDF-TestBuild3/
+OGDF-MakeBuild/
+third_party/miracl-build/
+AlgorithmImplementation/quadratic-sieve/build-macos15/
+
+# Generated compiler and linker files
+*.o
+*.lo
+*.la
+*.dylib
+*.so
+*.d
+
+# Generated static libraries
+*.a
+
+
+# Legacy demonstration build scripts
+AlgorithmImplementation/**/build.sh
+AlgorithmImplementation/**/build-macos15.sh
+
+# Intermediate CMake backups and test directory
+CMakeLists.txt.after-*
+lemon-build-test/
+
+# Precompiled demonstration and support executables
+/usr/resource/Alice
+/usr/resource/AliceGF
+/usr/resource/Bob
+/usr/resource/BobGF
+/usr/resource/buildCurve
+/usr/resource/DocumentReceiver
+/usr/resource/DocumentRequester
+/usr/resource/DocumentServer
+/usr/resource/DocumentServerGF
+/usr/resource/ecsgen
+/usr/resource/ecsign
+/usr/resource/ecsver
+/usr/resource/elliptic-curve-setup
+/usr/resource/index
+/usr/resource/qs
+/usr/resource/Receiver
+/usr/resource/Sender
+/usr/resource/verifyDocument
+
+# Linux/GTK ABI reference files not needed for macOS
+/third_party/wxwidgets/build/elfabi/*.abi
+
+# Local source-code backups
+*.original
+*.backup-*
+*.orig
+
+# Legacy installed dependencies
+/usr/include/
+/usr/lib/
+/usr/wxWidgets-3.2.2.1-staged/
+/usr/gmp-build-macos15/

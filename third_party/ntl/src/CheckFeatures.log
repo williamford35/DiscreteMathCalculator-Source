@@ -1,0 +1,664 @@
+*** CheckFeatures log ***
+/usr/bin/clang++ -I../include -I. -O2 -pthread -o TestGetTime TestGetTime.cpp GetTime1.cpp -lm
+running
+/usr/bin/clang++ -I../include -I. -O2 -pthread -o TestGetPID TestGetPID.cpp GetPID1.cpp -lm
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckALIGNED_ARRAY.cpp -o CheckFeatures -lm
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckBUILTIN_CLZL.cpp -o CheckFeatures -lm
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckLL_TYPE.cpp -o CheckFeatures -lm
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckSSSE3.cpp -o CheckFeatures -lm
+In file included from CheckSSSE3.cpp:4:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckSSSE3.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/xmmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckSSSE3.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/xmmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:3: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+   74 |   __builtin_ia32_emms();
+      |   ^~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:23: error: too few arguments to function call, expected 2, have 0
+   74 |   __builtin_ia32_emms();
+      |   ~~~~~~~~~~~~~~~~~~~~^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:165:22: error: use of undeclared identifier '__builtin_ia32_packsswb128'
+  165 |     return __trunc64(__builtin_ia32_packsswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:191:22: error: use of undeclared identifier '__builtin_ia32_packssdw128'
+  191 |     return __trunc64(__builtin_ia32_packssdw128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:217:22: error: use of undeclared identifier '__builtin_ia32_packuswb128'
+  217 |     return __trunc64(__builtin_ia32_packuswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:707:22: error: use of undeclared identifier '__builtin_ia32_pmaddwd128'
+  707 |     return __trunc64(__builtin_ia32_pmaddwd128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:729:22: error: use of undeclared identifier '__builtin_ia32_pmulhw128'
+  729 |     return __trunc64(__builtin_ia32_pmulhw128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:22: error: use of undeclared identifier '__builtin_ia32_psllw128'; did you mean '__builtin_arm_wsr128'?
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:46: error: cannot initialize a parameter of type 'const char *' with an rvalue of type '__v8hi' (vector of 8 'short' values)
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+  775 |                                              (__v8hi)__anyext128(__count)));
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:59:44: note: expanded from macro '__trunc64'
+   59 |   (__m64) __builtin_shufflevector((__v2di)(x), __extension__(__v2di){}, 0)
+      |                                            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:797:22: error: use of undeclared identifier '__builtin_ia32_psllwi128'
+  797 |     return __trunc64(__builtin_ia32_psllwi128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:821:22: error: use of undeclared identifier '__builtin_ia32_pslld128'
+  821 |     return __trunc64(__builtin_ia32_pslld128((__v4si)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:844:22: error: use of undeclared identifier '__builtin_ia32_pslldi128'
+  844 |     return __trunc64(__builtin_ia32_pslldi128((__v4si)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:865:22: error: use of undeclared identifier '__builtin_ia32_psllq128'
+  865 |     return __trunc64(__builtin_ia32_psllq128((__v2di)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:886:22: error: use of undeclared identifier '__builtin_ia32_psllqi128'
+  886 |     return __trunc64(__builtin_ia32_psllqi128((__v2di)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:911:22: error: use of undeclared identifier '__builtin_ia32_psraw128'
+  911 |     return __trunc64(__builtin_ia32_psraw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:935:22: error: use of undeclared identifier '__builtin_ia32_psrawi128'
+  935 |     return __trunc64(__builtin_ia32_psrawi128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckAVX.cpp -o CheckFeatures -lm
+In file included from CheckAVX.cpp:4:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckAVX.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:13:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/hresetintrin.h:42:27: error: invalid input constraint 'a' in asm
+   42 |   __asm__ ("hreset $0" :: "a"(__eax));
+      |                           ^
+In file included from CheckAVX.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:19:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:33:10: error: use of undeclared identifier '__builtin_ia32_crc32qi'
+   33 |   return __builtin_ia32_crc32qi(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:53:10: error: use of undeclared identifier '__builtin_ia32_crc32hi'; did you mean '__builtin_arm_crc32h'?
+   53 |   return __builtin_ia32_crc32hi(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:73:10: error: use of undeclared identifier '__builtin_ia32_crc32si'
+   73 |   return __builtin_ia32_crc32si(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+In file included from CheckAVX.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:23:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:39:3: error: use of undeclared identifier '__builtin_ia32_aadd32'; did you mean '__builtin_arm_addg'?
+   39 |   __builtin_ia32_aadd32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:39:3: error: argument to '__builtin_arm_addg' must be a constant integer
+   39 |   __builtin_ia32_aadd32((int *)__A, __B);
+      |   ^                                 ~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:61:3: error: use of undeclared identifier '__builtin_ia32_aand32'
+   61 |   __builtin_ia32_aand32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:83:3: error: use of undeclared identifier '__builtin_ia32_aor32'
+   83 |   __builtin_ia32_aor32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:105:3: error: use of undeclared identifier '__builtin_ia32_axor32'
+  105 |   __builtin_ia32_axor32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+In file included from CheckAVX.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:19:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:3: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+   74 |   __builtin_ia32_emms();
+      |   ^~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:23: error: too few arguments to function call, expected 2, have 0
+   74 |   __builtin_ia32_emms();
+      |   ~~~~~~~~~~~~~~~~~~~~^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:165:22: error: use of undeclared identifier '__builtin_ia32_packsswb128'
+  165 |     return __trunc64(__builtin_ia32_packsswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:191:22: error: use of undeclared identifier '__builtin_ia32_packssdw128'
+  191 |     return __trunc64(__builtin_ia32_packssdw128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:217:22: error: use of undeclared identifier '__builtin_ia32_packuswb128'
+  217 |     return __trunc64(__builtin_ia32_packuswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:707:22: error: use of undeclared identifier '__builtin_ia32_pmaddwd128'
+  707 |     return __trunc64(__builtin_ia32_pmaddwd128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:729:22: error: use of undeclared identifier '__builtin_ia32_pmulhw128'
+  729 |     return __trunc64(__builtin_ia32_pmulhw128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:22: error: use of undeclared identifier '__builtin_ia32_psllw128'; did you mean '__builtin_arm_wsr128'?
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckPCLMUL.cpp -o CheckFeatures -lm
+In file included from CheckPCLMUL.cpp:4:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckPCLMUL.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckPCLMUL.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/xmmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckPCLMUL.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/xmmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:3: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+   74 |   __builtin_ia32_emms();
+      |   ^~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:23: error: too few arguments to function call, expected 2, have 0
+   74 |   __builtin_ia32_emms();
+      |   ~~~~~~~~~~~~~~~~~~~~^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:165:22: error: use of undeclared identifier '__builtin_ia32_packsswb128'
+  165 |     return __trunc64(__builtin_ia32_packsswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:191:22: error: use of undeclared identifier '__builtin_ia32_packssdw128'
+  191 |     return __trunc64(__builtin_ia32_packssdw128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:217:22: error: use of undeclared identifier '__builtin_ia32_packuswb128'
+  217 |     return __trunc64(__builtin_ia32_packuswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:707:22: error: use of undeclared identifier '__builtin_ia32_pmaddwd128'
+  707 |     return __trunc64(__builtin_ia32_pmaddwd128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:729:22: error: use of undeclared identifier '__builtin_ia32_pmulhw128'
+  729 |     return __trunc64(__builtin_ia32_pmulhw128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:22: error: use of undeclared identifier '__builtin_ia32_psllw128'; did you mean '__builtin_arm_wsr128'?
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:46: error: cannot initialize a parameter of type 'const char *' with an rvalue of type '__v8hi' (vector of 8 'short' values)
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+  775 |                                              (__v8hi)__anyext128(__count)));
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:59:44: note: expanded from macro '__trunc64'
+   59 |   (__m64) __builtin_shufflevector((__v2di)(x), __extension__(__v2di){}, 0)
+      |                                            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:797:22: error: use of undeclared identifier '__builtin_ia32_psllwi128'
+  797 |     return __trunc64(__builtin_ia32_psllwi128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:821:22: error: use of undeclared identifier '__builtin_ia32_pslld128'
+  821 |     return __trunc64(__builtin_ia32_pslld128((__v4si)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:844:22: error: use of undeclared identifier '__builtin_ia32_pslldi128'
+  844 |     return __trunc64(__builtin_ia32_pslldi128((__v4si)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:865:22: error: use of undeclared identifier '__builtin_ia32_psllq128'
+  865 |     return __trunc64(__builtin_ia32_psllq128((__v2di)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:886:22: error: use of undeclared identifier '__builtin_ia32_psllqi128'
+  886 |     return __trunc64(__builtin_ia32_psllqi128((__v2di)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:911:22: error: use of undeclared identifier '__builtin_ia32_psraw128'
+  911 |     return __trunc64(__builtin_ia32_psraw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckAVX2.cpp -o CheckFeatures -lm
+In file included from CheckAVX2.cpp:4:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckAVX2.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:13:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/hresetintrin.h:42:27: error: invalid input constraint 'a' in asm
+   42 |   __asm__ ("hreset $0" :: "a"(__eax));
+      |                           ^
+In file included from CheckAVX2.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:19:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:33:10: error: use of undeclared identifier '__builtin_ia32_crc32qi'
+   33 |   return __builtin_ia32_crc32qi(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:53:10: error: use of undeclared identifier '__builtin_ia32_crc32hi'; did you mean '__builtin_arm_crc32h'?
+   53 |   return __builtin_ia32_crc32hi(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:73:10: error: use of undeclared identifier '__builtin_ia32_crc32si'
+   73 |   return __builtin_ia32_crc32si(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+In file included from CheckAVX2.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:23:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:39:3: error: use of undeclared identifier '__builtin_ia32_aadd32'; did you mean '__builtin_arm_addg'?
+   39 |   __builtin_ia32_aadd32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:39:3: error: argument to '__builtin_arm_addg' must be a constant integer
+   39 |   __builtin_ia32_aadd32((int *)__A, __B);
+      |   ^                                 ~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:61:3: error: use of undeclared identifier '__builtin_ia32_aand32'
+   61 |   __builtin_ia32_aand32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:83:3: error: use of undeclared identifier '__builtin_ia32_aor32'
+   83 |   __builtin_ia32_aor32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:105:3: error: use of undeclared identifier '__builtin_ia32_axor32'
+  105 |   __builtin_ia32_axor32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+In file included from CheckAVX2.cpp:4:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:19:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:3: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+   74 |   __builtin_ia32_emms();
+      |   ^~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:23: error: too few arguments to function call, expected 2, have 0
+   74 |   __builtin_ia32_emms();
+      |   ~~~~~~~~~~~~~~~~~~~~^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:165:22: error: use of undeclared identifier '__builtin_ia32_packsswb128'
+  165 |     return __trunc64(__builtin_ia32_packsswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:191:22: error: use of undeclared identifier '__builtin_ia32_packssdw128'
+  191 |     return __trunc64(__builtin_ia32_packssdw128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:217:22: error: use of undeclared identifier '__builtin_ia32_packuswb128'
+  217 |     return __trunc64(__builtin_ia32_packuswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:707:22: error: use of undeclared identifier '__builtin_ia32_pmaddwd128'
+  707 |     return __trunc64(__builtin_ia32_pmaddwd128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:729:22: error: use of undeclared identifier '__builtin_ia32_pmulhw128'
+  729 |     return __trunc64(__builtin_ia32_pmulhw128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:22: error: use of undeclared identifier '__builtin_ia32_psllw128'; did you mean '__builtin_arm_wsr128'?
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckFMA.cpp -o CheckFeatures -lm
+In file included from CheckFMA.cpp:5:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckFMA.cpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:13:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/hresetintrin.h:42:27: error: invalid input constraint 'a' in asm
+   42 |   __asm__ ("hreset $0" :: "a"(__eax));
+      |                           ^
+In file included from CheckFMA.cpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:19:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:33:10: error: use of undeclared identifier '__builtin_ia32_crc32qi'
+   33 |   return __builtin_ia32_crc32qi(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:53:10: error: use of undeclared identifier '__builtin_ia32_crc32hi'; did you mean '__builtin_arm_crc32h'?
+   53 |   return __builtin_ia32_crc32hi(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:73:10: error: use of undeclared identifier '__builtin_ia32_crc32si'
+   73 |   return __builtin_ia32_crc32si(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+In file included from CheckFMA.cpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:23:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:39:3: error: use of undeclared identifier '__builtin_ia32_aadd32'; did you mean '__builtin_arm_addg'?
+   39 |   __builtin_ia32_aadd32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:39:3: error: argument to '__builtin_arm_addg' must be a constant integer
+   39 |   __builtin_ia32_aadd32((int *)__A, __B);
+      |   ^                                 ~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:61:3: error: use of undeclared identifier '__builtin_ia32_aand32'
+   61 |   __builtin_ia32_aand32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:83:3: error: use of undeclared identifier '__builtin_ia32_aor32'
+   83 |   __builtin_ia32_aor32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:105:3: error: use of undeclared identifier '__builtin_ia32_axor32'
+  105 |   __builtin_ia32_axor32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+In file included from CheckFMA.cpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:19:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:3: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+   74 |   __builtin_ia32_emms();
+      |   ^~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:23: error: too few arguments to function call, expected 2, have 0
+   74 |   __builtin_ia32_emms();
+      |   ~~~~~~~~~~~~~~~~~~~~^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:165:22: error: use of undeclared identifier '__builtin_ia32_packsswb128'
+  165 |     return __trunc64(__builtin_ia32_packsswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:191:22: error: use of undeclared identifier '__builtin_ia32_packssdw128'
+  191 |     return __trunc64(__builtin_ia32_packssdw128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:217:22: error: use of undeclared identifier '__builtin_ia32_packuswb128'
+  217 |     return __trunc64(__builtin_ia32_packuswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:707:22: error: use of undeclared identifier '__builtin_ia32_pmaddwd128'
+  707 |     return __trunc64(__builtin_ia32_pmaddwd128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:729:22: error: use of undeclared identifier '__builtin_ia32_pmulhw128'
+  729 |     return __trunc64(__builtin_ia32_pmulhw128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:22: error: use of undeclared identifier '__builtin_ia32_psllw128'; did you mean '__builtin_arm_wsr128'?
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckAVX512F.cpp -o CheckFeatures -lm
+In file included from CheckAVX512F.cpp:5:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckAVX512F.cpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:13:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/hresetintrin.h:42:27: error: invalid input constraint 'a' in asm
+   42 |   __asm__ ("hreset $0" :: "a"(__eax));
+      |                           ^
+In file included from CheckAVX512F.cpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:19:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:33:10: error: use of undeclared identifier '__builtin_ia32_crc32qi'
+   33 |   return __builtin_ia32_crc32qi(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:53:10: error: use of undeclared identifier '__builtin_ia32_crc32hi'; did you mean '__builtin_arm_crc32h'?
+   53 |   return __builtin_ia32_crc32hi(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/crc32intrin.h:73:10: error: use of undeclared identifier '__builtin_ia32_crc32si'
+   73 |   return __builtin_ia32_crc32si(__C, __D);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+In file included from CheckAVX512F.cpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/x86gprintrin.h:23:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:39:3: error: use of undeclared identifier '__builtin_ia32_aadd32'; did you mean '__builtin_arm_addg'?
+   39 |   __builtin_ia32_aadd32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:39:3: error: argument to '__builtin_arm_addg' must be a constant integer
+   39 |   __builtin_ia32_aadd32((int *)__A, __B);
+      |   ^                                 ~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:61:3: error: use of undeclared identifier '__builtin_ia32_aand32'
+   61 |   __builtin_ia32_aand32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:83:3: error: use of undeclared identifier '__builtin_ia32_aor32'
+   83 |   __builtin_ia32_aor32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/raointintrin.h:105:3: error: use of undeclared identifier '__builtin_ia32_axor32'
+  105 |   __builtin_ia32_axor32((int *)__A, __B);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+In file included from CheckAVX512F.cpp:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/immintrin.h:19:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:3: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+   74 |   __builtin_ia32_emms();
+      |   ^~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:23: error: too few arguments to function call, expected 2, have 0
+   74 |   __builtin_ia32_emms();
+      |   ~~~~~~~~~~~~~~~~~~~~^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:165:22: error: use of undeclared identifier '__builtin_ia32_packsswb128'
+  165 |     return __trunc64(__builtin_ia32_packsswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:191:22: error: use of undeclared identifier '__builtin_ia32_packssdw128'
+  191 |     return __trunc64(__builtin_ia32_packssdw128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:217:22: error: use of undeclared identifier '__builtin_ia32_packuswb128'
+  217 |     return __trunc64(__builtin_ia32_packuswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:707:22: error: use of undeclared identifier '__builtin_ia32_pmaddwd128'
+  707 |     return __trunc64(__builtin_ia32_pmaddwd128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:729:22: error: use of undeclared identifier '__builtin_ia32_pmulhw128'
+  729 |     return __trunc64(__builtin_ia32_pmulhw128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:22: error: use of undeclared identifier '__builtin_ia32_psllw128'; did you mean '__builtin_arm_wsr128'?
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckCOPY_TRAITS1.cpp -o CheckFeatures -lm
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckCOPY_TRAITS2.cpp -o CheckFeatures -lm
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:47:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<A>' requested here
+   47 |          !Relocate_aux_has_trivial_copy((A*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:48:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<B>' requested here
+   48 |          !Relocate_aux_has_trivial_copy((B*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:49:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<C>' requested here
+   49 |          !Relocate_aux_has_trivial_copy((C*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:50:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<D>' requested here
+   50 |          !Relocate_aux_has_trivial_copy((D*)0) &&    
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:51:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<E>' requested here
+   51 |          !Relocate_aux_has_trivial_copy((E*)0) &&    
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:52:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<AA>' requested here
+   52 |          !Relocate_aux_has_trivial_copy((AA*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:53:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<BB>' requested here
+   53 |          !Relocate_aux_has_trivial_copy((BB*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:54:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<CC>' requested here
+   54 |          !Relocate_aux_has_trivial_copy((CC*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:55:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<DD>' requested here
+   55 |          !Relocate_aux_has_trivial_copy((DD*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:57:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<EE>' requested here
+   57 |          !Relocate_aux_has_trivial_copy((EE*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:63:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<X>' requested here
+   63 |           Relocate_aux_has_trivial_copy((X*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:64:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<XX>' requested here
+   64 |           Relocate_aux_has_trivial_copy((XX*)0) &&
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:25:12: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+   25 |    return  __has_trivial_copy(T) &&
+      |            ^
+CheckCOPY_TRAITS2.cpp:65:11: note: in instantiation of function template specialization 'Relocate_aux_has_trivial_copy<int>' requested here
+   65 |           Relocate_aux_has_trivial_copy((int*)0)
+      |           ^
+CheckCOPY_TRAITS2.cpp:26:12: warning: builtin __has_trivial_destructor is deprecated; use __is_trivially_destructible instead [-Wdeprecated-builtins]
+   26 |            __has_trivial_destructor(T) &&
+      |            ^
+28 warnings generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckCHRONO_TIME.cpp -o CheckFeatures -lm
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckMACOS_TIME.cpp -o CheckFeatures -lm
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckPOSIX_TIME.cpp -o CheckFeatures -lm
+CheckPOSIX_TIME.cpp:36:15: error: use of undeclared identifier '_ntl_GetWallTime'
+   36 |    double t = _ntl_GetWallTime();
+      |               ^~~~~~~~~~~~~~~~
+CheckPOSIX_TIME.cpp:37:11: error: use of undeclared identifier 'retval'
+   37 |    return retval;
+      |           ^~~~~~
+2 errors generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckAES_NI.cpp -o CheckFeatures -lm
+In file included from CheckAES_NI.cpp:6:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckAES_NI.cpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckAES_NI.cpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/xmmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+In file included from CheckAES_NI.cpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/xmmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:14:2: error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+      |  ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:3: error: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
+   74 |   __builtin_ia32_emms();
+      |   ^~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/traits.h:158:10: note: '__builtin_isless' declared here
+  158 |   return __builtin_isless((type)__x, (type)__y);
+      |          ^
+In file included from CheckAES_NI.cpp:6:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/wmmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/emmintrin.h:17:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/xmmintrin.h:17:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:74:23: error: too few arguments to function call, expected 2, have 0
+   74 |   __builtin_ia32_emms();
+      |   ~~~~~~~~~~~~~~~~~~~~^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:165:22: error: use of undeclared identifier '__builtin_ia32_packsswb128'
+  165 |     return __trunc64(__builtin_ia32_packsswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:191:22: error: use of undeclared identifier '__builtin_ia32_packssdw128'
+  191 |     return __trunc64(__builtin_ia32_packssdw128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:217:22: error: use of undeclared identifier '__builtin_ia32_packuswb128'
+  217 |     return __trunc64(__builtin_ia32_packuswb128(
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:707:22: error: use of undeclared identifier '__builtin_ia32_pmaddwd128'
+  707 |     return __trunc64(__builtin_ia32_pmaddwd128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:729:22: error: use of undeclared identifier '__builtin_ia32_pmulhw128'
+  729 |     return __trunc64(__builtin_ia32_pmulhw128((__v8hi)__anyext128(__m1),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:22: error: use of undeclared identifier '__builtin_ia32_psllw128'; did you mean '__builtin_arm_wsr128'?
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:774:46: error: cannot initialize a parameter of type 'const char *' with an rvalue of type '__v8hi' (vector of 8 'short' values)
+  774 |     return __trunc64(__builtin_ia32_psllw128((__v8hi)__anyext128(__m),
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+  775 |                                              (__v8hi)__anyext128(__count)));
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:59:44: note: expanded from macro '__trunc64'
+   59 |   (__m64) __builtin_shufflevector((__v2di)(x), __extension__(__v2di){}, 0)
+      |                                            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:797:22: error: use of undeclared identifier '__builtin_ia32_psllwi128'
+  797 |     return __trunc64(__builtin_ia32_psllwi128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:821:22: error: use of undeclared identifier '__builtin_ia32_pslld128'
+  821 |     return __trunc64(__builtin_ia32_pslld128((__v4si)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:844:22: error: use of undeclared identifier '__builtin_ia32_pslldi128'
+  844 |     return __trunc64(__builtin_ia32_pslldi128((__v4si)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:865:22: error: use of undeclared identifier '__builtin_ia32_psllq128'
+  865 |     return __trunc64(__builtin_ia32_psllq128((__v2di)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:886:22: error: use of undeclared identifier '__builtin_ia32_psllqi128'
+  886 |     return __trunc64(__builtin_ia32_psllqi128((__v2di)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/mmintrin.h:911:22: error: use of undeclared identifier '__builtin_ia32_psraw128'
+  911 |     return __trunc64(__builtin_ia32_psraw128((__v8hi)__anyext128(__m),
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+/usr/bin/clang++ -I../include -I. -O2 -pthread CheckKMA.cpp -o CheckFeatures -lm
+CheckKMA.cpp:11:2: error: "KMA not supported"
+   11 | #error "KMA not supported"
+      |  ^
+1 error generated.

@@ -1,0 +1,37 @@
+In file included from main.c:4:
+fac_utils.c:2:12: error: conflicting types for 'c_factor'; have 'fac_cint **(const cint *, fac_params *)'
+    2 | fac_cint **c_factor(const cint *N, fac_params *config) {
+      |            ^~~~~~~~
+In file included from main.c:3:
+fac_headers.h:220:17: note: previous declaration of 'c_factor' with type 'fac_cint(const cint *, fac_params *)'
+  220 | static fac_cint c_factor(const cint *, fac_params *);
+      |                 ^~~~~~~~
+In file included from main.c:5:
+fac_quadratic.c:13:5: error: conflicting types for 'quadratic_sieve'; have 'int(fac_caller)'
+   13 | int quadratic_sieve(fac_caller caller) {
+      |     ^~~~~~~~~~~~~~~
+fac_headers.h:261:12: note: previous declaration of 'quadratic_sieve' with type 'int(fac_caller *)'
+  261 | static int quadratic_sieve(fac_caller *);
+      |            ^~~~~~~~~~~~~~~
+fac_quadratic.c: In function 'quadratic_sieve':
+fac_quadratic.c:20:33: error: invalid type argument of '->' (have 'fac_caller')
+   20 |         int limit = (int) caller->params->qs_limit;
+      |                                 ^~
+fac_quadratic.c:22:19: error: invalid type argument of '->' (have 'fac_caller')
+   22 |         if (caller->number->bits < 64 || caller->number->bits > limit) return 0;
+      |                   ^~
+fac_quadratic.c:22:48: error: invalid type argument of '->' (have 'fac_caller')
+   22 |         if (caller->number->bits < 64 || caller->number->bits > limit) return 0;
+      |                                                ^~
+fac_quadratic.c:25:33: error: incompatible type for argument 2 of 'preparation_part_1'
+   25 |         preparation_part_1(&qs, caller);
+      |                                 ^~~~~~
+      |                                 |
+      |                                 fac_caller
+fac_headers.h:264:51: note: expected 'fac_caller *' but argument is of type 'fac_caller'
+  264 | static inline void preparation_part_1(qs_sheet *, fac_caller *);
+      |                                                   ^~~~~~~~~~~~
+fac_headers.h: At top level:
+fac_headers.h:261:12: warning: 'quadratic_sieve' used but never defined
+  261 | static int quadratic_sieve(fac_caller *);
+      |            ^~~~~~~~~~~~~~~

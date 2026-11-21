@@ -1,0 +1,6 @@
+Use the ".sh" files to build hcompress and hdecompress.
+To compress a file do "./hcompress file" and to decompress
+do "./hdecompress file.huf uncompressedFileName"
+The files examples.bitcodes and smallfile.txt are files to
+test the software.
+

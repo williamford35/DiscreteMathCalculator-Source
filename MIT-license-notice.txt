@@ -1,0 +1,2 @@
+/* This source code is under MIT license. You can find the
+   complete license file in the root of the application directory. */

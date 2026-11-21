@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc">
+	<object class="wxDialog" name="AboutDialog">
+		<title>About BigInteger Calculator...</title>
+		<centered>1</centered>
+		<size>538,520</size>
+		<style>wxDEFAULT_DIALOG_STYLE|wxRAISED_BORDER</style>
+		<object class="wxFlexGridSizer">
+			<cols>1</cols>
+			<rows>3</rows>
+			<growablecols>0</growablecols>
+			<growablerows>0,1,2</growablerows>
+			<object class="sizeritem">
+				<object class="wxStaticBitmap" name="ID_BIG_INTEGER_HELP_STATICBITMAP1">
+					<bitmap>Contents/Resources/images\aboutdialog.png</bitmap>
+					<size>541,220</size>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxNotebook" name="ID_BIG_INTEGER_HELP_NOTEBOOK1">
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_DESCRIPTION_PANEL">
+							<size>500,200</size>
+							<object class="wxGridSizer">
+								<cols>1</cols>
+								<rows>1</rows>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_DESCRIPTION_STATICTEXT">
+										<label>Welcome to BigInteger Calculator!&#x0A;&#x0A;BigInteger Calculator is intended for use in the number theory&#x0A;segment of a discrete mathematics course. It enables the&#x0A;student to work with very large numbers using both&#x0A;normal and modular arithmetic. It performs computations&#x0A;such as generating large prime numbers, finding the&#x0A;greatest common divisor of two integers, and computing&#x0A;inverses (mod n). An excellent use of the calculator is&#x0A;to execute RSA encryption/decryption step by step using&#x0A;realistic numbers rather than the usual classroom examples&#x0A;such as p = 3, q = 5.&#x0A;</label>
+										<size>500,200</size>
+									</object>
+									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+						</object>
+						<label>Description</label>
+					</object>
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_INFORMATION_PANEL">
+							<object class="wxGridSizer">
+								<cols>1</cols>
+								<rows>1</rows>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_INFORMATION_STATICTEXT">
+										<label>Name: BigIntegerCalculator&#x0A;Version: Release 1.0&#x0A;Author: William Ford&#x0A;Department of Computer Science&#x0A;&#x0A;School of Engineering and Computer Science&#x0A;University of the Pacific&#x0A;Stockton, California 95211&#x0A;E-mail: wford@pacific.edu&#x0A;Website: http://www1.stk.pacific.edu/~wford</label>
+									</object>
+									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+						</object>
+						<label>Information</label>
+					</object>
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_THANKSTO_PANEL">
+							<object class="wxGridSizer">
+								<cols>1</cols>
+								<rows>1</rows>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_THANKS_TO_STATICTEXT">
+										<label>My Ph.D. thesis advisor T. W. Ting who inspired in me&#x0A;a lifelong excitement for mathematics.&#x0A;&#x0A;Victor Shoup (victor@shoup.net) for his outstanding&#x0A;NTL package -- a C++ library for doing numbery theory .&#x0A;http://www.shoup.net/ntl/&#x0A;&#x0A;The Code::Blocks team for building the best IDE for&#x0A;C/C++ development I have ever used.&#x0A;http://www.codeblocks.org/</label>
+									</object>
+									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+						</object>
+						<label>Thanks to...</label>
+					</object>
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_LICENSE_PANEL">
+							<object class="wxGridSizer">
+								<cols>1</cols>
+								<rows>1</rows>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_LICENSE_STATICTEXT">
+										<label>This program is licensed under the terms&#x0A;of the GNU General Public License version 3&#x0A;&#x0A;Available online under:&#x0A;http://www.gnu.org/licenses/gpl-3.0.html</label>
+									</object>
+									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+						</object>
+						<label>License</label>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_CLOSE_BUTTON">
+					<label>Close</label>
+				</object>
+				<flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</resource>

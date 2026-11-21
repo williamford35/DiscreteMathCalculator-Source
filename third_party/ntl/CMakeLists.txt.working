@@ -1,0 +1,67 @@
+# NTL 11.5.1 — build from source for macOS ARM64.
+
+set(NTL_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}")
+set(NTL_BUILD "${CMAKE_CURRENT_BINARY_DIR}/ntl-build")
+set(NTL_LIBRARY "${NTL_BUILD}/src/ntl.a")
+
+set(GMP_PREFIX "${PROJECT_SOURCE_DIR}/usr/gmp-build-macos15/install")
+set(GMP_STATIC "${GMP_PREFIX}/lib/libgmp.a")
+
+if(NOT EXISTS "${GMP_STATIC}")
+    message(FATAL_ERROR "NTL requires ${GMP_STATIC}")
+endif()
+
+# NTL generates headers during configuration and compilation.
+# These headers must exist before application sources are compiled.
+set(NTL_INCLUDE "${NTL_BUILD}/include")
+
+file(MAKE_DIRECTORY "${NTL_INCLUDE}")
+
+add_custom_command(
+    OUTPUT "${NTL_LIBRARY}"
+
+    COMMAND "${CMAKE_COMMAND}" -E copy_directory
+            "${NTL_SOURCE}/src"
+            "${NTL_BUILD}/src"
+
+    COMMAND "${CMAKE_COMMAND}" -E copy_directory
+            "${NTL_SOURCE}/include"
+            "${NTL_INCLUDE}"
+
+    COMMAND /bin/sh ./configure
+            CXX=/usr/bin/clang++
+            CXXFLAGS=-O2
+            NATIVE=off
+            NTL_GMP_LIP=on
+            NTL_THREADS=on
+            NTL_THREAD_BOOST=on
+            NTL_STD_CXX11=on
+            GMP_PREFIX=${GMP_PREFIX}
+
+    COMMAND /usr/bin/make
+            GMP_OPT_LIB=${GMP_STATIC}
+            -j4
+
+    WORKING_DIRECTORY "${NTL_BUILD}/src"
+
+    DEPENDS
+        "${NTL_SOURCE}/src/DoConfig"
+        "${NTL_SOURCE}/src/mfile"
+        "${NTL_SOURCE}/src/FFT.cpp"
+        "${NTL_SOURCE}/src/ZZ.cpp"
+        "${GMP_STATIC}"
+
+    COMMENT "Configuring and building NTL 11.5.1"
+    VERBATIM
+)
+
+add_custom_target(ntl_build DEPENDS "${NTL_LIBRARY}")
+
+add_library(ntl STATIC IMPORTED GLOBAL)
+
+set_target_properties(ntl PROPERTIES
+    IMPORTED_LOCATION "${NTL_LIBRARY}"
+    INTERFACE_INCLUDE_DIRECTORIES "${NTL_INCLUDE}"
+)
+
+add_dependencies(ntl ntl_build)

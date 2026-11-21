@@ -1,0 +1,41 @@
+# Build Crypto++ from its included source using GNUmakefile.
+
+set(CRYPTOPP_SOURCE_DIR
+    "${PROJECT_SOURCE_DIR}/third_party/cryptopp"
+)
+
+set(CRYPTOPP_LIBRARY
+    "${CMAKE_CURRENT_BINARY_DIR}/libcryptopp.a"
+)
+
+add_custom_command(
+    OUTPUT "${CRYPTOPP_LIBRARY}"
+
+    COMMAND /usr/bin/make
+        -f GNUmakefile
+        static
+        CXX=/usr/bin/clang++
+        -j4
+
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${CRYPTOPP_SOURCE_DIR}/libcryptopp.a"
+        "${CRYPTOPP_LIBRARY}"
+
+    WORKING_DIRECTORY "${CRYPTOPP_SOURCE_DIR}"
+
+    COMMENT "Building Crypto++ static library from source"
+    VERBATIM
+)
+
+add_custom_target(cryptopp_build
+    DEPENDS "${CRYPTOPP_LIBRARY}"
+)
+
+add_library(cryptopp STATIC IMPORTED GLOBAL)
+
+set_target_properties(cryptopp PROPERTIES
+    IMPORTED_LOCATION "${CRYPTOPP_LIBRARY}"
+    INTERFACE_INCLUDE_DIRECTORIES "${CRYPTOPP_SOURCE_DIR}"
+)
+
+add_dependencies(cryptopp cryptopp_build)

@@ -1,0 +1,7 @@
+For some reason "octet.o" is in the archive C++miracl.a even though
+it was not included by C++arm64.sh. Remove it as follows:
+
+	ar dv ./C++miracl.a octet.o
+
+This avoids multiple definitions when building "DiscreteMathCalculator".
+

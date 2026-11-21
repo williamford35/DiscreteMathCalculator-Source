@@ -1,0 +1,38 @@
+Thanks to:
+
+To the developers of wxWidgets, a C++ library for creating GUI applications for Windows, macOS, Linux and other platforms. 
+
+Michal Bližnák for his wxShapeFramework, without which I could not have drawn trees and graphs.
+http://sourceforge.net/projects/wxsf/
+
+Victor Shoup for his NTL package, a C++ library for doing number theory that includes
+the ability to work with very large integers.
+http://www.shoup.net/ntl/
+
+The GMP library for arbitrary precision arithmetic, operating on signed integers,
+rational numbers, and floating-point numbers.
+https://gmplib.org/
+
+The Open Graph Drawing Framework (OGDF), a C++ class library for the automatic layout of graphs,
+supported by the Technical University of Dortmund, the University of Cologne, and
+Oreas Optimization Research and Software.
+http://www.ogdf.net/doku.php
+
+Efficient Modeling and Optimization in Networks (LEMON), a C++ template library
+providing efficient implementations of common data structures and algorithms with
+focus on combinatorial optimization tasks connected mainly with graphs and networks.
+https://lemon.cs.elte.hu/trac/lemon
+
+The MIRACL multiprecision, integer, and rational arithmetic cryptographic library that is
+widely regarded for its open source SDK for elliptic curve cryptography (ECC).
+https://github.com/miracl/MIRACL
+
+To the developers of nauty (no automorphisms, yes?), a set of procedures for determining
+the automorphism group of a vertex-coloured graph.
+https://users.cecs.anu.edu.au/~bdm/nauty/
+
+The VFGRAPH graph matching library developed at the Intelligent Systems and Artificial
+Vision Lab at the University of Naples.
+
+To the Crypto++ Library, a C++ class library of cryptographic schemes.
+https://www.cryptopp.com/

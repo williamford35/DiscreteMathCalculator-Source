@@ -1,0 +1,1 @@
+cp ./index ../../usr/resource

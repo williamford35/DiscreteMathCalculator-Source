@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc">
+	<object class="wxDialog" name="AddTreeNode">
+		<title>Dialog</title>
+		<centered>1</centered>
+		<size>350,35</size>
+		<object class="wxPanel" name="ID_ADD_TREE_NODE_PANEL">
+			<object class="wxFlexGridSizer">
+				<cols>5</cols>
+				<rows>1</rows>
+				<object class="sizeritem">
+					<object class="wxStaticText" name="ID_TREE_NODE_NUMBER_STATICTEXT">
+						<label>1</label>
+					</object>
+					<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+					<border>5</border>
+					<option>1</option>
+				</object>
+				<object class="sizeritem">
+					<object class="wxStaticText" name="ID_NODE_LABEL_STATICTEXT">
+						<label>Node</label>
+					</object>
+					<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+					<border>5</border>
+					<option>1</option>
+				</object>
+				<object class="sizeritem">
+					<object class="wxTextCtrl" name="ID_NODE_NAME_TEXTCTRL" />
+					<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+					<border>5</border>
+					<option>1</option>
+				</object>
+				<object class="sizeritem">
+					<object class="wxCheckBox" name="ID_LEFT_CHILD_CHECKBOX">
+						<label>Left child</label>
+					</object>
+					<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+					<border>5</border>
+					<option>1</option>
+				</object>
+				<object class="sizeritem">
+					<object class="wxCheckBox" name="ID_RIGHT_NODE_CHECKBOX">
+						<label>Right child</label>
+					</object>
+					<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+					<border>5</border>
+					<option>1</option>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

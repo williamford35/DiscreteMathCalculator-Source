@@ -1,0 +1,150 @@
+fac_lanczos.c:8:33: error: unknown type name 'qs_sheet'
+    8 | void lanczos_mul_MxN_Nx64(const qs_sheet *qs, const uint64_t *X, const qs_sm max_size, uint64_t *Y) {
+      |                                 ^~~~~~~~
+fac_lanczos.c:8:53: error: unknown type name 'uint64_t'
+    8 | void lanczos_mul_MxN_Nx64(const qs_sheet *qs, const uint64_t *X, const qs_sm max_size, uint64_t *Y) {
+      |                                                     ^~~~~~~~
+fac_lanczos.c:8:72: error: unknown type name 'qs_sm'
+    8 | void lanczos_mul_MxN_Nx64(const qs_sheet *qs, const uint64_t *X, const qs_sm max_size, uint64_t *Y) {
+      |                                                                        ^~~~~
+fac_lanczos.c:8:88: error: unknown type name 'uint64_t'
+    8 | void lanczos_mul_MxN_Nx64(const qs_sheet *qs, const uint64_t *X, const qs_sm max_size, uint64_t *Y) {
+      |                                                                                        ^~~~~~~~
+fac_lanczos.c:1:1: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | // Block Lanczos algorithm : "nullspace over a finite field", take advantage of sparsity of the matrix.
+fac_lanczos.c:18:39: error: unknown type name 'qs_sheet'
+   18 | void lanczos_mul_trans_MxN_Nx64(const qs_sheet *qs, const uint64_t *X, uint64_t *Y) {
+      |                                       ^~~~~~~~
+fac_lanczos.c:18:59: error: unknown type name 'uint64_t'
+   18 | void lanczos_mul_trans_MxN_Nx64(const qs_sheet *qs, const uint64_t *X, uint64_t *Y) {
+      |                                                           ^~~~~~~~
+fac_lanczos.c:18:72: error: unknown type name 'uint64_t'
+   18 | void lanczos_mul_trans_MxN_Nx64(const qs_sheet *qs, const uint64_t *X, uint64_t *Y) {
+      |                                                                        ^~~~~~~~
+fac_lanczos.c:18:72: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:27:34: error: unknown type name 'qs_sheet'
+   27 | void lanczos_mul_64xN_Nx64(const qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                  ^~~~~~~~
+fac_lanczos.c:27:54: error: unknown type name 'uint64_t'
+   27 | void lanczos_mul_64xN_Nx64(const qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                                      ^~~~~~~~
+fac_lanczos.c:27:73: error: unknown type name 'uint64_t'
+   27 | void lanczos_mul_64xN_Nx64(const qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                                                         ^~~~~~~~
+fac_lanczos.c:27:86: error: unknown type name 'uint64_t'
+   27 | void lanczos_mul_64xN_Nx64(const qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                                                                      ^~~~~~~~
+fac_lanczos.c:27:86: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:27:99: error: unknown type name 'uint64_t'
+   27 | void lanczos_mul_64xN_Nx64(const qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                                                                                   ^~~~~~~~
+fac_lanczos.c:27:99: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:48:1: error: unknown type name 'uint64_t'
+   48 | uint64_t lanczos_find_non_singular_sub(const uint64_t *t, const uint64_t * last_s, uint64_t *s, uint64_t last_dim, uint64_t *w) {
+      | ^~~~~~~~
+fac_lanczos.c:48:1: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:48:46: error: unknown type name 'uint64_t'
+   48 | uint64_t lanczos_find_non_singular_sub(const uint64_t *t, const uint64_t * last_s, uint64_t *s, uint64_t last_dim, uint64_t *w) {
+      |                                              ^~~~~~~~
+fac_lanczos.c:48:65: error: unknown type name 'uint64_t'
+   48 | uint64_t lanczos_find_non_singular_sub(const uint64_t *t, const uint64_t * last_s, uint64_t *s, uint64_t last_dim, uint64_t *w) {
+      |                                                                 ^~~~~~~~
+fac_lanczos.c:48:84: error: unknown type name 'uint64_t'
+   48 | uint64_t lanczos_find_non_singular_sub(const uint64_t *t, const uint64_t * last_s, uint64_t *s, uint64_t last_dim, uint64_t *w) {
+      |                                                                                    ^~~~~~~~
+fac_lanczos.c:48:84: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:48:97: error: unknown type name 'uint64_t'
+   48 | uint64_t lanczos_find_non_singular_sub(const uint64_t *t, const uint64_t * last_s, uint64_t *s, uint64_t last_dim, uint64_t *w) {
+      |                                                                                                 ^~~~~~~~
+fac_lanczos.c:48:97: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:48:116: error: unknown type name 'uint64_t'
+   48 | uint64_t lanczos_find_non_singular_sub(const uint64_t *t, const uint64_t * last_s, uint64_t *s, uint64_t last_dim, uint64_t *w) {
+      |                                                                                                                    ^~~~~~~~
+fac_lanczos.c:48:116: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:116:33: error: unknown type name 'qs_sheet'
+  116 | void lanczos_mul_Nx64_64x64_acc(qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                 ^~~~~~~~
+fac_lanczos.c:116:53: error: unknown type name 'uint64_t'
+  116 | void lanczos_mul_Nx64_64x64_acc(qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                                     ^~~~~~~~
+fac_lanczos.c:116:72: error: unknown type name 'uint64_t'
+  116 | void lanczos_mul_Nx64_64x64_acc(qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                                                        ^~~~~~~~
+fac_lanczos.c:116:85: error: unknown type name 'uint64_t'
+  116 | void lanczos_mul_Nx64_64x64_acc(qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                                                                     ^~~~~~~~
+fac_lanczos.c:116:85: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:116:98: error: unknown type name 'uint64_t'
+  116 | void lanczos_mul_Nx64_64x64_acc(qs_sheet *qs, const uint64_t *X, const uint64_t *Y, uint64_t *Z, uint64_t *T) {
+      |                                                                                                  ^~~~~~~~
+fac_lanczos.c:116:98: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:130:36: error: unknown type name 'uint64_t'
+  130 | void lanczos_mul_64x64_64x64(const uint64_t *X, const uint64_t *Y, uint64_t *Z) {
+      |                                    ^~~~~~~~
+fac_lanczos.c:130:55: error: unknown type name 'uint64_t'
+  130 | void lanczos_mul_64x64_64x64(const uint64_t *X, const uint64_t *Y, uint64_t *Z) {
+      |                                                       ^~~~~~~~
+fac_lanczos.c:130:68: error: unknown type name 'uint64_t'
+  130 | void lanczos_mul_64x64_64x64(const uint64_t *X, const uint64_t *Y, uint64_t *Z) {
+      |                                                                    ^~~~~~~~
+fac_lanczos.c:130:68: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:139:31: error: unknown type name 'qs_sheet'
+  139 | void lanczos_transpose_vector(qs_sheet *qs, const uint64_t *X, uint64_t **Y) {
+      |                               ^~~~~~~~
+fac_lanczos.c:139:51: error: unknown type name 'uint64_t'
+  139 | void lanczos_transpose_vector(qs_sheet *qs, const uint64_t *X, uint64_t **Y) {
+      |                                                   ^~~~~~~~
+fac_lanczos.c:139:64: error: unknown type name 'uint64_t'
+  139 | void lanczos_transpose_vector(qs_sheet *qs, const uint64_t *X, uint64_t **Y) {
+      |                                                                ^~~~~~~~
+fac_lanczos.c:139:64: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:148:27: error: unknown type name 'qs_sheet'
+  148 | void lanczos_combine_cols(qs_sheet *qs, uint64_t *x, uint64_t *v, uint64_t *ax, uint64_t *av) {
+      |                           ^~~~~~~~
+fac_lanczos.c:148:41: error: unknown type name 'uint64_t'
+  148 | void lanczos_combine_cols(qs_sheet *qs, uint64_t *x, uint64_t *v, uint64_t *ax, uint64_t *av) {
+      |                                         ^~~~~~~~
+fac_lanczos.c:148:41: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:148:54: error: unknown type name 'uint64_t'
+  148 | void lanczos_combine_cols(qs_sheet *qs, uint64_t *x, uint64_t *v, uint64_t *ax, uint64_t *av) {
+      |                                                      ^~~~~~~~
+fac_lanczos.c:148:54: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:148:67: error: unknown type name 'uint64_t'
+  148 | void lanczos_combine_cols(qs_sheet *qs, uint64_t *x, uint64_t *v, uint64_t *ax, uint64_t *av) {
+      |                                                                   ^~~~~~~~
+fac_lanczos.c:148:67: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:148:81: error: unknown type name 'uint64_t'
+  148 | void lanczos_combine_cols(qs_sheet *qs, uint64_t *x, uint64_t *v, uint64_t *ax, uint64_t *av) {
+      |                                                                                 ^~~~~~~~
+fac_lanczos.c:148:81: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:202:26: error: unknown type name 'qs_sheet'
+  202 | void lanczos_build_array(qs_sheet *qs, uint64_t ** target, const size_t quantity, const size_t size){
+      |                          ^~~~~~~~
+fac_lanczos.c:202:40: error: unknown type name 'uint64_t'
+  202 | void lanczos_build_array(qs_sheet *qs, uint64_t ** target, const size_t quantity, const size_t size){
+      |                                        ^~~~~~~~
+fac_lanczos.c:202:40: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:202:66: error: unknown type name 'size_t'
+  202 | void lanczos_build_array(qs_sheet *qs, uint64_t ** target, const size_t quantity, const size_t size){
+      |                                                                  ^~~~~~
+fac_lanczos.c:202:89: error: unknown type name 'size_t'
+  202 | void lanczos_build_array(qs_sheet *qs, uint64_t ** target, const size_t quantity, const size_t size){
+      |                                                                                         ^~~~~~
+fac_lanczos.c:211:1: error: unknown type name 'uint64_t'
+  211 | uint64_t *lanczos_block_worker(qs_sheet *qs) {
+      | ^~~~~~~~
+fac_lanczos.c:211:1: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:211:32: error: unknown type name 'qs_sheet'
+  211 | uint64_t *lanczos_block_worker(qs_sheet *qs) {
+      |                                ^~~~~~~~
+fac_lanczos.c:303:28: error: unknown type name 'qs_sheet'
+  303 | void lanczos_reduce_matrix(qs_sheet *qs) {
+      |                            ^~~~~~~~
+fac_lanczos.c:342:1: error: unknown type name 'uint64_t'
+  342 | uint64_t *lanczos_block(qs_sheet *qs) {
+      | ^~~~~~~~
+fac_lanczos.c:342:1: note: 'uint64_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+fac_lanczos.c:342:25: error: unknown type name 'qs_sheet'
+  342 | uint64_t *lanczos_block(qs_sheet *qs) {
+      |                         ^~~~~~~~

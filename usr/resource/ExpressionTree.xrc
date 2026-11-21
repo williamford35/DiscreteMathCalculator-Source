@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc">
+	<object class="wxDialog" name="ExpressionTree">
+		<title>Expression Tree</title>
+		<centered>1</centered>
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<object class="wxFlexGridSizer">
+			<rows>2</rows>
+			<object class="sizeritem">
+				<object class="wxPanel" name="ID_EXPRESSION_TREE_LABEL_PANEL">
+					<object class="wxFlexGridSizer">
+						<cols>1</cols>
+						<growablecols>0</growablecols>
+						<object class="sizeritem">
+							<object class="wxStaticText" name="ID_EXPRESSION_TREE_STATICTEXT">
+								<label>Enter an Infix Expression (+ - * / % ^ unary -)</label>
+							</object>
+							<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>2</border>
+							<option>1</option>
+						</object>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>2</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxPanel" name="ID_EXPRESSION_TREE_BUTTON_PANEL">
+					<object class="wxFlexGridSizer">
+						<cols>4</cols>
+						<rows>1</rows>
+						<growablecols>0</growablecols>
+						<growablerows>0</growablerows>
+						<object class="sizeritem">
+							<object class="wxTextCtrl" name="ID_EXPRESSION_TREE_TEXTCTRL">
+								<size>500,200</size>
+								<font>
+									<size>10</size>
+									<style>normal</style>
+									<weight>normal</weight>
+									<underlined>0</underlined>
+									<family>swiss</family>
+									<face>Courier New</face>
+								</font>
+								<style>wxTE_MULTILINE|wxHSCROLL</style>
+							</object>
+							<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>2</border>
+							<option>1</option>
+						</object>
+						<object class="sizeritem">
+							<object class="wxButton" name="ID_EXPRESSION_TREE_BUILD_BUTTON">
+								<label>Build</label>
+								<default>1</default>
+							</object>
+							<flag>wxALL|wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+						<object class="sizeritem">
+							<object class="wxButton" name="ID_EXPRESSION_TREE_CLEAR_BUTTON">
+								<label>Clear</label>
+							</object>
+							<flag>wxALL|wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+						<object class="sizeritem">
+							<object class="wxButton" name="ID_EXPRESSION_TREE_CANCEL_BUTTON">
+								<label>Cancel</label>
+							</object>
+							<flag>wxALL|wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>2</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</resource>

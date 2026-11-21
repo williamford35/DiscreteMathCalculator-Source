@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource xmlns="http://www.wxwidgets.org/wxxrc">
+	<object class="wxDialog" name="EnterData">
+		<title>Enter Tree Data</title>
+		<centered>1</centered>
+		<object class="wxFlexGridSizer">
+			<cols>1</cols>
+			<rows>2</rows>
+			<growablerows>0</growablerows>
+			<object class="sizeritem">
+				<object class="wxPanel" name="ID_ENTER_DATA_PANEL">
+					<object class="wxFlexGridSizer">
+						<cols>1</cols>
+						<rows>2</rows>
+						<growablerows>1</growablerows>
+						<object class="sizeritem">
+							<object class="wxStaticText" name="ID_ENTER_DATA_LABEL_STATICTEXT">
+								<label>Enter data separated by whitespace.</label>
+							</object>
+							<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+						<object class="sizeritem">
+							<object class="wxTextCtrl" name="ID_ENTER_DATA_TEXTCTRL">
+								<size>500,400</size>
+								<style>wxTE_AUTO_SCROLL|wxTE_MULTILINE|wxHSCROLL</style>
+							</object>
+							<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxPanel" name="ID_ENTER_DATA_BUTTON_PANEL">
+					<object class="wxFlexGridSizer">
+						<cols>3</cols>
+						<growablecols>0</growablecols>
+						<object class="spacer">
+							<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+						<object class="sizeritem">
+							<object class="wxButton" name="ID_ENTER_DATA_CLOSE_BUTTON">
+								<label>Close</label>
+								<default>1</default>
+							</object>
+							<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+						<object class="sizeritem">
+							<object class="wxButton" name="ID_ENTER_DATA_BUTTON">
+								<label>Cancel</label>
+							</object>
+							<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</resource>
