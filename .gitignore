@@ -109,3 +109,5 @@ lemon-build-test/
 /usr/lib/
 /usr/wxWidgets-3.2.2.1-staged/
 /usr/gmp-build-macos15/
+
+/MakeBuild-SourceCheck/
