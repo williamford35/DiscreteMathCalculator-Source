@@ -81,3 +81,10 @@ A separate source checkout was successfully configured and built using Unix Make
 See LICENSE and MIT-license-notice.txt for project licensing information.
 
 Bundled third-party libraries retain their respective licenses.
+
+
+## DiscreteMathCalculator Distributions
+
+- [Windows 11 x64](https://github.com/williamford35/DiscreteMathCalculator-Windows)
+- [macOS Apple Silicon](https://github.com/williamford35/DiscreteMathCalculator-macOS)
+- [Complete Source Code](https://github.com/williamford35/DiscreteMathCalculator-Source)
