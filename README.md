@@ -88,3 +88,8 @@ Bundled third-party libraries retain their respective licenses.
 - [Windows 11 x64](https://github.com/williamford35/DiscreteMathCalculator-Windows)
 - [macOS Apple Silicon](https://github.com/williamford35/DiscreteMathCalculator-macOS)
 - [Complete Source Code](https://github.com/williamford35/DiscreteMathCalculator-Source)
+
+
+## Related Distributions
+
+- [Windows x64 Source Code](https://github.com/williamford35/DiscreteMathCalculator-Windows-Source)
